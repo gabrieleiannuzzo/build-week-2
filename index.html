@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 
 </head>
-<body>
+<body class="bg-primary">
     <div class="container-fluid h-100">
         <div class="row h-100">
-            <nav class="col-md-2 d-none d-md-block sidebar">
+            <nav class="col-2 h-100 bg-secondary d-md-block sidebar">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
@@ -33,7 +33,7 @@
                 </div>
             </nav>
 
-            <main role="main" class="col-md-8 pt-3 content" id="target">
+            <main role="main" class="col-8 pt-3 content" id="target">
                 <div class="album-header">
                     <h1>VIOLA (feat. Salmo)</h1>
                     <p>Fedez, Salmo</p>
@@ -42,56 +42,16 @@
                 <!-- More content goes here -->
             </main>
 
-            <nav class="col-md-2 d-none d-md-block sidebar activity">
-                <!-- Activity feed goes here -->
-            </nav>
+            <aside class="col-2 h-100 bg-success sidebar activity bg-danger">
+                ciaoooo
+            </aside>
         </div>
 
-        <footer class="fixed-bottom bg-dark footer-player">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-4">
-                        <!-- Song Info -->
-                        <div class="media">
-                            <img class="mr-3" src="placeholder-album-cover.jpg" alt="Generic placeholder image" style="width: 60px; height: 60px;">
-                            <div class="media-body">
-                                <h5 class="mt-0">Song Title</h5>
-                                <p>Artist Name</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <!-- Playback Controls -->
-                        <div class="text-center">
-                            <button class="btn btn-secondary" type="button">
-                                <span>&#9664;</span> Previous
-                            </button>
-                            <button class="btn btn-success mx-2" type="button">
-                                <span>&#9654;</span> Play
-                            </button>
-                            <button class="btn btn-secondary" type="button">
-                                Next <span>&#9654;</span>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <!-- Volume & Other Controls -->
-                        <div class="text-right">
-                            <button class="btn btn-secondary" type="button">
-                                <span>&#128264;</span> Mute
-                            </button>
-                            <!-- Volume slider -->
-                            <input type="range" class="custom-range" min="0" max="100" step="1">
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <footer class="fixed-bottom bg-dark h-25" id="footer-player">
         </footer>
         
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.0/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
