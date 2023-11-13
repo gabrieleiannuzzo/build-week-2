@@ -1,0 +1,97 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+}
+
+.sidebar, .content, .activity {
+    padding: 1rem;
+}
+
+.sidebar {
+    background-color: #000;
+}
+
+.content {
+    flex: 1;
+}
+
+.activity {
+    background-color: #000;
+}
+
+.fixed-bottom {
+    background-color: #181818;
+    border-top: 1px solid #282828;
+}
+
+/* Custom styles */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: #1db954;
+}
+
+.playlist {
+    margin-top: 1rem;
+}
+
+.playlist h2 {
+    font-size: 1rem;
+}
+
+.playlist p {
+    font-size: 0.9rem;
+}
+
+.album-header {
+    margin-bottom: 2rem;
+}
+
+.album-header h1 {
+    font-size: 2rem;
+}
+
+.album-header p {
+    font-size: 1.2rem;
+}
+
+.album-header button {
+    background-color: #1db954;
+    border: none;
+    padding: 0.5rem 2rem;
+    color: white;
+    margin-top: 1rem;
+    border-radius: 2rem;
+}
+
+.footer-player {
+    padding: 1rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+.footer-player {
+    color: white;
+    height: 90px;
+}
+
+.footer-player .btn {
+    color: white;
+}
+
+.footer-player .btn:focus {
+    box-shadow: none;
+}
+
+.footer-player .custom-range {
+    width: 100px;
+    vertical-align: middle;
+}
