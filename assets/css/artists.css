@@ -1,0 +1,14 @@
+/* ARTISTS */
+.artist {
+  background-image: url(../imgs/search/image-52.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25vh;
+  width: auto;
+}
+
+.artist-details {
+  background: rgb(2,231,218);
+background: linear-gradient(180deg, rgba(2,231,218,0.6) 0%, rgba(2,231,218,0) 100%);
+}
