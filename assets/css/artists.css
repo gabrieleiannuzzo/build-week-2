@@ -3,7 +3,7 @@
   background-image: url(../imgs/search/image-52.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position:center;
   height: 25vh;
   width: auto;
 }
@@ -11,4 +11,16 @@
 .artist-details {
   background: rgb(2,231,218);
 background: linear-gradient(180deg, rgba(2,231,218,0.6) 0%, rgba(2,231,218,0) 100%);
+}
+
+.arrow-mob-l svg{
+  background-color: rgba(87, 87, 87, 0.368);
+  border-radius: 50%;  
+}
+
+.btn-play svg{
+  background-color: #006401;
+  border-radius: 50%;
+  padding: 5px 5px 5px 8px;
+  color: black;
 }
