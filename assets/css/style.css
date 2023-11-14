@@ -8,6 +8,7 @@
 }
 #row aside .playlist-side .playlist-element {
   color: rgb(214, 214, 214);
+  cursor: pointer;
 }
 #row aside .playlist-side::-webkit-scrollbar {
   width: 10px;
@@ -55,8 +56,13 @@
   background-color: rgb(140, 140, 140);
 }
 #row #target {
-  flex: 0 0 65%;
+  flex: 0 0 100%;
   background-color: #1db954;
+}
+@media screen and (min-width: 768px) {
+  #row #target {
+    flex: 0 0 65%;
+  }
 }
 #row #aside-2 {
   flex: 0 0 14%;

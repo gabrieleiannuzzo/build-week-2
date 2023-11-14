@@ -9,6 +9,7 @@
 
             .playlist-element {
                 color: rgb(214, 214, 214);
+                cursor: pointer;
             }
         }
 
@@ -75,8 +76,11 @@
     }
 
     #target {
-        flex: 0 0 65%;
+        flex: 0 0 100%;
         background-color: #1db954;
+        @media screen and (min-width: 768px){
+            flex: 0 0 65%;
+        }
     }
 
     #aside-2 {

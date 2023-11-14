@@ -1,0 +1,60 @@
+/* ARTISTS */
+.artist {
+    background-image: url(../imgs/search/image-52.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+  }
+  
+  .artist-details {
+    background: rgb(2,231,218);
+    background: linear-gradient(180deg, rgba(2,231,218,0.6) 0%, rgba(2,231,218,0) 100%);
+  }
+  
+  .arrow-mob-l svg{
+    background-color: rgba(87, 87, 87, 0.368);
+    border-radius: 50%;  
+  }
+  
+  .btn-play svg{
+    background-color: #006401;
+    border-radius: 50%;
+    padding: 5px 5px 5px 8px;
+    color: black;
+  }
+  
+  #img-arts-like{
+    background-image: url(../imgs/search/image-52.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+  
+  .heart-liked svg{
+    color: black;
+    background-color: #B4FCC3;
+    border: 3px solid white;
+    padding: 4px;
+    border-radius: 50%;
+  }
+  
+  .heart-liked{
+    position: absolute;
+    right: -2px;
+    bottom: -2px;
+  }
+  
+  #img-popolar-art{
+    width: 80px;
+    height: 80px;
+    border: 2px solid white;
+  }
+  
+  #img-user-dr{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+  }
