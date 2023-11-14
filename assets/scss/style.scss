@@ -4,7 +4,10 @@
         height: calc(100vh - 100px);
         .playlist-side{
             overflow-y: auto;
-            height: calc(100vh - 360.8px);
+            height: calc(100vh - 373px);
+            .playlist-element{
+                color: rgb(214, 214, 214);
+            }
         }
 
         .playlist-side::-webkit-scrollbar {
@@ -30,11 +33,11 @@
             border: none;
             color: white;
             .circle{
-                font-size: 0.4rem;
+                font-size: 0.3rem;
             }
         }
         i{
-            font-size: 1.4rem;
+            font-size: 1.2rem;
         }
         #icons{
             a{
@@ -48,6 +51,11 @@
             a{
                 color: rgb(214, 214, 214);
             }
+        }
+        .line{
+            width: calc(100% - 12px);
+            height: 1px;
+            background-color: rgb(140, 140, 140);
         }
     }
 

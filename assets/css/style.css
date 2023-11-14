@@ -4,7 +4,10 @@
 }
 #row aside .playlist-side {
   overflow-y: auto;
-  height: calc(100vh - 360.8px);
+  height: calc(100vh - 373px);
+}
+#row aside .playlist-side .playlist-element {
+  color: rgb(214, 214, 214);
 }
 #row aside .playlist-side::-webkit-scrollbar {
   width: 10px;
@@ -28,10 +31,10 @@
   color: white;
 }
 #row #aside-1 button .circle {
-  font-size: 0.4rem;
+  font-size: 0.3rem;
 }
 #row #aside-1 i {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 #row #aside-1 #icons a {
   color: rgb(214, 214, 214);
@@ -41,6 +44,11 @@
 }
 #row #aside-1 nav a {
   color: rgb(214, 214, 214);
+}
+#row #aside-1 .line {
+  width: calc(100% - 12px);
+  height: 1px;
+  background-color: rgb(140, 140, 140);
 }
 #row #target {
   flex: 0 0 65%;
