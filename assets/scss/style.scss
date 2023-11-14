@@ -73,18 +73,80 @@
             height: 1px;
             background-color: rgb(140, 140, 140);
         }
+
+        .playlist-element {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            -webkit-line-clamp: 1;
+        }
     }
 
     #target {
         flex: 0 0 100%;
         background-color: #1db954;
-        @media screen and (min-width: 768px){
+
+        @media screen and (min-width: 768px) {
             flex: 0 0 65%;
         }
     }
 
     #aside-2 {
         flex: 0 0 14%;
+        .attivita-amici{
+            display: none;
+            @media screen and (min-width: 1128px){
+                display: block;
+            }
+        }
+        i:hover{
+            color: #1db954;
+        }
+        #add-friends{
+            font-size: 0.8rem;
+            top: -2px;
+        }
+
+        .friends-div {
+            font-size: 0.7rem;
+            display: none;
+            @media screen and (min-width: 1405px){
+                display: flex;
+            }
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 100%;
+            }
+
+            .bold {
+                font-weight: 700;
+            }
+
+            .first-span,
+            .second-span {
+                font-size: 0.6rem;
+            }
+
+            .circle {
+                font-size: 0.2rem;
+                vertical-align: middle;
+            }
+
+            .outer-circle-div {
+                width: 15px;
+                height: 15px;
+                border-radius: 100%;
+                border: 1px solid rgb(214, 214, 214);
+                &>div{
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 100%;
+                    border: 1px solid rgb(214, 214, 214)
+                }
+            }
+        }
     }
 }
 
@@ -135,6 +197,20 @@
                 flex: 0 0 33.33%;
                 justify-content: center;
                 position: static;
+            }
+
+            #song-time {
+                cursor: pointer;
+
+                #song-time-toggler {
+                    top: 50%;
+                    right: 0;
+                    transform: translate(50%, -50%);
+                    width: 15px;
+                    height: 15px;
+                    background-color: #1db954;
+                    border-radius: 100%;
+                }
             }
         }
 
@@ -190,8 +266,7 @@
                 width: 400px;
                 background-color: rgb(214, 214, 214);
 
-                &>div {
-                    width: 150px;
+                #song-time-line {
                     background-color: #1db954;
                 }
             }
