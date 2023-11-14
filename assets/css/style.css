@@ -1,3 +1,179 @@
+#row aside {
+  background-color: black;
+  height: calc(100vh - 100px);
+}
+#row aside .playlist-side {
+  overflow-y: auto;
+  height: calc(100vh - 373px);
+}
+#row aside .playlist-side .playlist-element {
+  color: rgb(214, 214, 214);
+  cursor: pointer;
+}
+#row aside .playlist-side::-webkit-scrollbar {
+  width: 10px;
+}
+#row aside .playlist-side::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+#row aside .playlist-side::-webkit-scrollbar-track {
+  background-color: #131313;
+}
+#row #aside-1 {
+  flex: 0 0 21%;
+}
+#row #aside-1 .container-custom {
+  padding-left: 12px;
+}
+#row #aside-1 button {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  color: white;
+}
+#row #aside-1 button .circle {
+  font-size: 0.3rem;
+}
+#row #aside-1 i {
+  font-size: 1.2rem;
+}
+#row #aside-1 #icons a {
+  color: rgb(214, 214, 214);
+}
+#row #aside-1 .current-page {
+  color: white;
+}
+#row #aside-1 nav a {
+  color: rgb(214, 214, 214);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+#row #aside-1 .line {
+  width: calc(100% - 12px);
+  height: 1px;
+  background-color: rgb(140, 140, 140);
+}
+#row #target {
+  flex: 0 0 100%;
+  background-color: #1db954;
+}
+@media screen and (min-width: 768px) {
+  #row #target {
+    flex: 0 0 65%;
+  }
+}
+#row #aside-2 {
+  flex: 0 0 14%;
+}
+
+#footer {
+  height: 100px;
+  background-color: #181818;
+}
+#footer i {
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+#footer i:hover {
+  color: #1db954;
+}
+#footer #album-info #song-info {
+  flex: 0 0 40%;
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  #footer #album-info #song-info {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #footer #album-info #song-info {
+    flex: 0 0 33.33%;
+  }
+}
+#footer #album-info #song-info p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+#footer #album-info #player {
+  flex: 0 0 100%;
+  justify-content: end;
+}
+@media screen and (min-width: 900px) {
+  #footer #album-info #player {
+    position: absolute;
+    right: 12px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #footer #album-info #player {
+    flex: 0 0 33.33%;
+    justify-content: center;
+    position: static;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #footer #album-info > div {
+    flex: 0 0 33.33%;
+  }
+}
+#footer #album-info img {
+  width: 70px;
+}
+#footer #player .circles:hover {
+  color: #1db954;
+}
+#footer #player .circle {
+  font-size: 0.3rem;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#footer #player #play {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+  color: #181818;
+  cursor: pointer;
+}
+#footer #player #play:hover {
+  color: #1db954;
+}
+#footer #player #play i {
+  margin-left: 2px;
+}
+#footer #player #song div {
+  height: 5px;
+  border-radius: 50px;
+}
+#footer #player #song > div {
+  width: 400px;
+  background-color: rgb(214, 214, 214);
+}
+#footer #player #song > div > div {
+  width: 150px;
+  background-color: #1db954;
+}
+#footer #settings-div {
+  display: none;
+}
+@media screen and (min-width: 1500px) {
+  #footer #settings-div {
+    display: flex;
+  }
+}
+#footer #settings-div #volume {
+  width: 100px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: white;
+}
+
 #mobile-menu #div-mobile-1 {
   background-color: #282828;
   column-gap: 10px;

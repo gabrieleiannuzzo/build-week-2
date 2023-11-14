@@ -1,51 +1,277 @@
+#row {
+    aside {
+        background-color: black;
+        height: calc(100vh - 100px);
+
+        .playlist-side {
+            overflow-y: auto;
+            height: calc(100vh - 373px);
+
+            .playlist-element {
+                color: rgb(214, 214, 214);
+                cursor: pointer;
+            }
+        }
+
+        .playlist-side::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .playlist-side::-webkit-scrollbar-thumb {
+            background-color: #888;
+        }
+
+        .playlist-side::-webkit-scrollbar-track {
+            background-color: #131313;
+        }
+    }
+
+    #aside-1 {
+        flex: 0 0 21%;
+
+        .container-custom {
+            padding-left: 12px;
+        }
+
+        button {
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            color: white;
+
+            .circle {
+                font-size: 0.3rem;
+            }
+        }
+
+        i {
+            font-size: 1.2rem;
+        }
+
+        #icons {
+            a {
+                color: rgb(214, 214, 214);
+            }
+        }
+
+        .current-page {
+            color: white;
+        }
+
+        nav {
+            a {
+                color: rgb(214, 214, 214);
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 1;
+            }
+        }
+
+        .line {
+            width: calc(100% - 12px);
+            height: 1px;
+            background-color: rgb(140, 140, 140);
+        }
+    }
+
+    #target {
+        flex: 0 0 100%;
+        background-color: #1db954;
+        @media screen and (min-width: 768px){
+            flex: 0 0 65%;
+        }
+    }
+
+    #aside-2 {
+        flex: 0 0 14%;
+    }
+}
+
+#footer {
+    height: 100px;
+    background-color: #181818;
+
+    i {
+        font-size: 1.2rem;
+        cursor: pointer;
+
+        &:hover {
+            color: #1db954;
+        }
+    }
+
+    #album-info {
+        #song-info {
+            flex: 0 0 40%;
+            display: none;
+
+            @media screen and (min-width: 900px) {
+                display: flex;
+            }
+
+            @media screen and (min-width: 1500px) {
+                flex: 0 0 33.33%;
+            }
+
+            p {
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 1;
+            }
+        }
+
+        #player {
+            flex: 0 0 100%;
+            justify-content: end;
+
+            @media screen and (min-width: 900px) {
+                position: absolute;
+                right: 12px;
+            }
+
+            @media screen and (min-width: 1500px) {
+                flex: 0 0 33.33%;
+                justify-content: center;
+                position: static;
+            }
+        }
+
+        &>div {
+            @media screen and (min-width: 1500px) {
+                flex: 0 0 33.33%;
+            }
+        }
+
+        img {
+            width: 70px;
+        }
+    }
+
+    #player {
+        .circles {
+            &:hover {
+                color: #1db954;
+            }
+        }
+
+        .circle {
+            font-size: 0.3rem;
+            bottom: -6px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #play {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            background-color: white;
+            color: #181818;
+            cursor: pointer;
+
+            &:hover {
+                color: #1db954;
+            }
+
+            i {
+                margin-left: 2px;
+            }
+        }
+
+        #song {
+            div {
+                height: 5px;
+                border-radius: 50px;
+            }
+
+            &>div {
+                width: 400px;
+                background-color: rgb(214, 214, 214);
+
+                &>div {
+                    width: 150px;
+                    background-color: #1db954;
+                }
+            }
+        }
+    }
+
+    #settings-div {
+        display: none;
+
+        @media screen and (min-width: 1500px) {
+            display: flex;
+        }
+
+        #volume {
+            width: 100px;
+            height: 5px;
+            border-radius: 50px;
+            background-color: white;
+        }
+    }
+}
+
 #mobile-menu {
     #div-mobile-1 {
         background-color: #282828;
         column-gap: 10px;
         margin-bottom: 35px;
-        #outer-div{
+
+        #outer-div {
             background-color: white;
-            @media screen and (min-width: 476px){
+
+            @media screen and (min-width: 476px) {
                 background-color: #252525;
                 min-width: 40px;
                 height: 40px;
                 border-radius: 100%;
-                &>div{
+
+                &>div {
                     width: 20px;
                     height: 20px;
                     background-color: #282828;
                     border-radius: 100%;
-                    &>div{
+
+                    &>div {
                         width: 15px;
                         height: 15px;
                         border-radius: 100%;
                         background-color: #252525;
-                        &>div{
-                        width: 5px;
-                        height: 5px;
-                        border-radius: 100%;
-                        background-color: #282828;
+
+                        &>div {
+                            width: 5px;
+                            height: 5px;
+                            border-radius: 100%;
+                            background-color: #282828;
                         }
                     }
                 }
             }
         }
+
         #limited-text {
             display: -webkit-box;
             -webkit-box-orient: vertical;
             overflow: hidden;
             -webkit-line-clamp: 1;
         }
-        i{
+
+        i {
             font-size: 1.4rem;
         }
-        .computer{
-            color: rgb(214, 214, 214);;
+
+        .computer {
+            color: rgb(214, 214, 214);
+            ;
         }
     }
 
     #div-mobile-2 {
         background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), black);
+
         i {
             color: rgb(214, 214, 214);
             font-size: 1.4rem;
