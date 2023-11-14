@@ -4,7 +4,7 @@
         height: calc(100vh - 100px);
         .playlist-side{
             overflow-y: auto;
-            height: 500px;
+            height: calc(100vh - 360.8px);
         }
 
         .playlist-side::-webkit-scrollbar {
@@ -21,17 +21,33 @@
     }
     #aside-1{
         flex: 0 0 21%;
+        .container-custom{
+            padding-left: 12px;
+        }
         button{
             background-color: transparent;
             padding: 0;
             border: none;
             color: white;
             .circle{
-                font-size: 0.3rem;
+                font-size: 0.4rem;
             }
         }
         i{
             font-size: 1.4rem;
+        }
+        #icons{
+            a{
+                color: rgb(214, 214, 214);
+            }
+        }
+        .current-page{
+            color: white;
+        }
+        nav{
+            a{
+                color: rgb(214, 214, 214);
+            }
         }
     }
 
