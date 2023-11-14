@@ -2,10 +2,9 @@
     aside{
         background-color: black;
         height: calc(100vh - 100px);
-        overflow: hidden;
-        z-index: -100;
         .playlist-side{
-            overflow-y: scroll;
+            overflow-y: auto;
+            height: 500px;
         }
 
         .playlist-side::-webkit-scrollbar {
@@ -22,6 +21,18 @@
     }
     #aside-1{
         flex: 0 0 21%;
+        button{
+            background-color: transparent;
+            padding: 0;
+            border: none;
+            color: white;
+            .circle{
+                font-size: 0.3rem;
+            }
+        }
+        i{
+            font-size: 1.4rem;
+        }
     }
 
     #target{
@@ -39,6 +50,10 @@
     background-color: #181818;
     i{
         font-size: 1.2rem;
+        cursor: pointer;
+        &:hover{
+            color: #1db954;
+        }
     }
     #album-info{
         &>div{
