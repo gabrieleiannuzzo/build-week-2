@@ -1,3 +1,101 @@
+#row aside {
+  background-color: black;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+  z-index: -100;
+}
+#row aside .playlist-side {
+  overflow-y: scroll;
+}
+#row aside .playlist-side::-webkit-scrollbar {
+  width: 10px;
+}
+#row aside .playlist-side::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+#row aside .playlist-side::-webkit-scrollbar-track {
+  background-color: #131313;
+}
+#row #aside-1 {
+  flex: 0 0 21%;
+}
+#row #target {
+  flex: 0 0 65%;
+  background-color: #1db954;
+}
+#row #aside-2 {
+  flex: 0 0 14%;
+}
+
+#footer {
+  height: 100px;
+  background-color: #181818;
+}
+#footer i {
+  font-size: 1.2rem;
+}
+#footer #album-info > div {
+  flex: 0 0 50%;
+}
+@media screen and (min-width: 1500px) {
+  #footer #album-info > div {
+    flex: 0 0 33.33%;
+  }
+}
+#footer #album-info #player {
+  justify-content: end;
+}
+@media screen and (min-width: 1500px) {
+  #footer #album-info #player {
+    justify-content: center;
+  }
+}
+#footer #album-info img {
+  width: 70px;
+}
+#footer #player .circle {
+  font-size: 0.3rem;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#footer #player #play {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: white;
+  color: #181818;
+}
+#footer #player #play i {
+  margin-left: 2px;
+}
+#footer #player #song div {
+  height: 5px;
+  border-radius: 50px;
+}
+#footer #player #song > div {
+  width: 400px;
+  background-color: rgb(214, 214, 214);
+}
+#footer #player #song > div > div {
+  width: 150px;
+  background-color: #1db954;
+}
+#footer #settings-div {
+  display: none;
+}
+@media screen and (min-width: 1500px) {
+  #footer #settings-div {
+    display: flex;
+  }
+}
+#footer #settings-div #volume {
+  width: 100px;
+  height: 5px;
+  border-radius: 50px;
+  background-color: white;
+}
+
 #mobile-menu #div-mobile-1 {
   background-color: #282828;
   column-gap: 10px;

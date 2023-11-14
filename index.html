@@ -1,57 +1,177 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clone di Spotify</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Spotify</title>
+
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
-
 </head>
-<body class="bg-primary">
-    <div class="container-fluid h-100">
-        <div class="row h-100">
-            <nav class="col-2 h-100 bg-secondary d-md-block sidebar">
-                <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">
-                                Home
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Cerca
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                La tua libreria
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
 
-            <main role="main" class="col-8 pt-3 content" id="target">
-                <div class="album-header">
-                    <h1>VIOLA (feat. Salmo)</h1>
-                    <p>Fedez, Salmo</p>
-                    <button>Play</button>
+<body class="text-white">
+    <div id="row" class="d-flex">
+        <aside id="aside-1" class="d-none d-md-block">
+            <div class="container-fluid">
+                <div>...</div>
+                <nav class="list-unstyled">
+                    <li>
+                        <span><i class="fa-sharp fa-solid fa-house"></i></span>
+                        <a href="#" class="link-underline link-underline-opacity-0 text-white">Home</a>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                        <a href="#" class="link-underline link-underline-opacity-0 text-white">Cerca</a>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-lines-leaning"></i></span>
+                        <a href="#" class="link-underline link-underline-opacity-0 text-white">La tua
+                            libreria</a>
+                    </li>
+                </nav>
+                <nav class="list-unstyled">
+                    <li>
+                        <span><i class="fa-solid fa-square-plus"></i></span>
+                        <a href="#" class="link-underline link-underline-opacity-0 text-white">Crea
+                            playlist</a>
+                    </li>
+                    <li>
+                        <span><i class="fa-sharp fa-solid fa-heart"></i></span>
+                        <a href="#" class="link-underline link-underline-opacity-0 text-white">Brani che ti
+                            piacciono</a>
+                    </li>
+                    <li>
+                        <span><i class="fa-solid fa-bookmark"></i></span>
+                        <a href="#" class="link-underline link-underline-opacity-0 text-white">I tuoi
+                            episodi</a>
+                    </li>
+                </nav>
+                <div class="playlist-side w-100">
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
+                    <p class="d-block">ciao</p>
                 </div>
-                <!-- More content goes here -->
-            </main>
+            </div>
+        </aside>
 
-            <aside class="col-2 h-100 bg-success sidebar activity bg-danger">
-                ciaoooo
-            </aside>
+        <main id="target">
+            <div class="container-fluid"></div>
+        </main>
+
+        <aside id="aside-2" class="d-none d-md-block">
+            <div class="container-fluid"></div>
+        </aside>
+    </div>
+
+    <footer id="footer" class="d-none d-md-flex align-items-center">
+        <div class="container-fluid d-flex align-items-center justify-content-between" id="album-info">
+            <div class="d-flex justify-content-start align-items-center">
+                <img src="assets/imgs/main/image-1.jpg" alt="album">
+                <div class="ms-3">
+                    <p class="mb-0">Super fucsia</p>
+                    <p class="mb-0">Charles Leclerc</p>
+                </div>
+                <i class="fa-regular fa-heart ms-5"></i>
+            </div>
+
+            <div id="player" class="d-flex flex-column align-items-center">
+                <div class="d-flex justify-content-center align-items-center column-gap-4">
+                    <div class="position-relative">
+                        <i class="fa-solid fa-shuffle"></i>
+                        <i class="fa-solid fa-circle position-absolute circle"></i>
+                    </div>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <div id="play" class="d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-play"></i>
+                    </div>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <div class="position-relative">
+                        <i class="fa-solid fa-repeat"></i>
+                        <i class="fa-solid fa-circle position-absolute circle"></i>
+                    </div>
+                </div>
+                <div id="song" class="d-flex align-items-center column-gap-3 mt-2">
+                    <p class="mb-0">1:00</p>
+                    <div>
+                        <div></div>
+                    </div>
+                    <p class="mb-0">3:20</p>
+                </div>
+            </div>
+    
+            <div class="justify-content-end align-items-center column-gap-3" id="settings-div">
+                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-microphone"></i>
+                <i class="fa-solid fa-computer computer"></i>
+                <i class="fa-solid fa-volume-low"></i>
+                <div id="volume"></div>
+                <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+            </div>
+        </div>
+    </footer>
+
+    <div class="container-fluid d-md-none bg-transparent position-fixed bottom-0" id="mobile-menu">
+        <div id="div-mobile-1" class="p-3 d-flex align-items-center rounded-2">
+            <div id="outer-div" class="d-flex justify-content-center align-items-center">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-center">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <p id="limited-text" class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia beatae labore natus corrupti expedita
+                eum id nulla! Harum molestiae amet aspernatur, hic culpa cum explicabo adipisci et doloremque aut illum!
+            </p>
+            <div class="d-flex column-gap-2">
+                <i class="fa-solid fa-computer computer"></i>
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-play"></i>
+            </div>
         </div>
 
-        <footer class="fixed-bottom bg-dark h-25" id="footer-player">
-        </footer>
-        
+        <div class="container-fluid bg-transparent bottom-0 border-0 d-flex justify-content-evenly text-center align-items-center" id="div-mobile-2">
+            <div>
+                <span class="current-page"><i class="fa-sharp fa-solid fa-house"></i></span>
+                <p class="current-page">Home</p>
+            </div>
+            <div>
+                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                <p>Cerca</p>
+            </div>
+            <div>
+                <span><i class="fa-solid fa-lines-leaning"></i></span>
+                <p>La tua libreria</p>
+            </div>
+        </div>
     </div>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
