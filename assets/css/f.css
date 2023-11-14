@@ -4,13 +4,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position:center;
-  height: 25vh;
-}
-
-@media screen and (min-width: 768px) {
-  .artist {
-    height: 40vh;
-  }
 }
 
 .artist-details {
@@ -65,5 +58,4 @@
   height: 40px;
   border-radius: 50%;
 }
-
 
