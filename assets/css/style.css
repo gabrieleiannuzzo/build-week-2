@@ -44,6 +44,10 @@
 }
 #row #aside-1 nav a {
   color: rgb(214, 214, 214);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
 }
 #row #aside-1 .line {
   width: calc(100% - 12px);
@@ -69,24 +73,53 @@
 #footer i:hover {
   color: #1db954;
 }
-#footer #album-info > div {
-  flex: 0 0 50%;
+#footer #album-info #song-info {
+  flex: 0 0 40%;
+  display: none;
+}
+@media screen and (min-width: 900px) {
+  #footer #album-info #song-info {
+    display: flex;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #footer #album-info #song-info {
+    flex: 0 0 33.33%;
+  }
+}
+#footer #album-info #song-info p {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+#footer #album-info #player {
+  flex: 0 0 100%;
+  justify-content: end;
+}
+@media screen and (min-width: 900px) {
+  #footer #album-info #player {
+    position: absolute;
+    right: 12px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  #footer #album-info #player {
+    flex: 0 0 33.33%;
+    justify-content: center;
+    position: static;
+  }
 }
 @media screen and (min-width: 1500px) {
   #footer #album-info > div {
     flex: 0 0 33.33%;
   }
 }
-#footer #album-info #player {
-  justify-content: end;
-}
-@media screen and (min-width: 1500px) {
-  #footer #album-info #player {
-    justify-content: center;
-  }
-}
 #footer #album-info img {
   width: 70px;
+}
+#footer #player .circles:hover {
+  color: #1db954;
 }
 #footer #player .circle {
   font-size: 0.3rem;
@@ -100,6 +133,10 @@
   border-radius: 100%;
   background-color: white;
   color: #181818;
+  cursor: pointer;
+}
+#footer #player #play:hover {
+  color: #1db954;
 }
 #footer #player #play i {
   margin-left: 2px;
