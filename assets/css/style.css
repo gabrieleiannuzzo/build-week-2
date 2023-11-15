@@ -1,3 +1,11 @@
+.pointer {
+  cursor: pointer;
+}
+
+.underline {
+  color: #1db954;
+}
+
 #row aside {
   background-color: black;
   height: calc(100vh - 100px);
@@ -64,10 +72,12 @@
 #row #target {
   flex: 0 0 100%;
   background-color: #1db954;
+  height: 100vh;
 }
 @media screen and (min-width: 768px) {
   #row #target {
     flex: 0 0 65%;
+    height: calc(100vh - 100px);
   }
 }
 #row #aside-2 {
@@ -214,7 +224,7 @@
 #footer #player #play:hover {
   color: #1db954;
 }
-#footer #player #play i {
+#footer #player #play .play {
   margin-left: 2px;
 }
 #footer #player #song div {
@@ -236,11 +246,26 @@
     display: flex;
   }
 }
-#footer #settings-div #volume {
+#footer #settings-div #volume-outer {
   width: 100px;
   height: 5px;
   border-radius: 50px;
+  background-color: rgb(118, 118, 118);
+  cursor: pointer;
+}
+#footer #settings-div #volume-outer #volume {
+  height: 5px;
+  border-radius: 50px;
   background-color: white;
+}
+#footer #settings-div #volume-outer #volume > div {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: white;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
 }
 
 #mobile-menu #div-mobile-1 {

@@ -20,8 +20,8 @@
 
 /*brano in ascolto*/
 
-#main-brano{
-    width: 100%;
+#branoInAscolto{
+    width: 98%;
     height: 10rem;
     background-color: rgba(0, 0, 0, 0.793);
     
@@ -36,9 +36,38 @@
     width: 18%;
     
 }
+/* consigliati*/
 
-.card-consigliati{
-    width: 10%;
+.main-card-consigliati{
+
+    height: 4rem;
+    
 }
 
-.stile{}
+.main-consigliati-div-card {
+
+    height: 4rem;
+}
+
+
+.main-card-consigliati{
+    flex: 0 0 calc(50% - 4px);
+}
+
+@media screen and (min-width: 768px){ 
+    .main-card-consigliati {
+         flex: 0 0 calc(33.33% - 5.33px);
+        }
+    
+}
+.font-card-consigliati{
+    font-size: 0.7rem;
+}
+
+
+
+
+.dimensione{
+    width: 100%;
+    height: 100%;
+}
