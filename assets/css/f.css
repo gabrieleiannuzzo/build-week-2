@@ -69,3 +69,18 @@
   max-height: 90vh;
 }
 
+.track-row:hover{
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 769px ) {
+  .hide-icon {
+    display: none !important; 
+  }
+}
+
+
+.track-row:hover .hide-icon{
+ display: block !important;
+}
