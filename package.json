@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.2"
+    "bootstrap": "^5.3.2",
+    "bootstrap-icons": "^1.11.1"
   },
   "scripts": {
     "compile": "sass assets/scss/style.scss assets/css/style.css -w",
