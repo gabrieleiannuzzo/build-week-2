@@ -1,4 +1,4 @@
-const token = "BQACAfd1KcbTDa9ipPXO-w0PpeTCsMZoWfG02ojqHrMzfD7mQrNO627trQ5rDdtRp6G9vH-80mkNsvo2Z7NpCDTczYgoqhek7rkecXQQPloxNavHq5g"
+const token = "BQAiPGI3L9hGRWTc9unkR_KpVAm-HUO_KOY8pakIfGLSlwyO0o6PxLLgvVt9l79m_hrKz6022nG1A41lmAkmFC_vnUPKJ1hA3k0TDsajahDeZUaSXIg"
 const inputField = document.getElementById('search-inp');
 
 inputField.addEventListener('keydown', function (event) {
