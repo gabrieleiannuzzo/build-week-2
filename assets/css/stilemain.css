@@ -1,3 +1,7 @@
+.colore{
+    background-color: rgb(40, 40, 40);
+}
+
 /*div controlli sopra*/
 
 
@@ -36,22 +40,37 @@
     width: 18%;
     
 }
+
+.dimensione{
+    height: 100%;
+    aspect-ratio: 1/1;
+    width: 10rem;
+}
 /* consigliati*/
 
 .main-card-consigliati{
 
     height: 4rem;
+    background-color: rgb(50, 50, 50);
     
 }
 
 .main-consigliati-div-card {
 
     height: 4rem;
+    width: 10rem;
 }
-
-
+.main-consigliati-ctr-card{
+    width: 5rem;
+    height: 5rem;
+}
 .main-card-consigliati{
     flex: 0 0 calc(50% - 4px);
+}
+
+.main-card-consigliati img {
+    
+    max-height: 100%;
 }
 
 @media screen and (min-width: 768px){ 
@@ -62,12 +81,13 @@
 }
 .font-card-consigliati{
     font-size: 0.7rem;
+    color: white;
 }
 
 
-
-
-.dimensione{
-    width: 100%;
-    height: 100%;
+.sizeIcon{
+   font-size: 1.5rem;
+   
 }
+
+
