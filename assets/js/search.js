@@ -19,7 +19,8 @@ inputField.addEventListener('keydown', function (event) {
             .then(data => {
 
                 populateSearchAlbums(data);
-                populateSearchArtist(data)
+                populateSearchArtist(data);
+                populateSearchTracks(data);
             })
             .catch(err => console.log(err));
     }
@@ -63,12 +64,11 @@ function fetchArtistsImg(url) {
         .then(response => response.json())
         .then(data => {
             artistImg = data.images[0].url
-            console.log(artistImg);
         })
         .catch(err => console.log(err));
 }
 
-function populateSearchArtist(data, url) {
+function populateSearchArtist(data) {
     for (let i = 0; i <= 3; i++) {
         const rowSearch = document.getElementById('search-row');
 
@@ -99,7 +99,30 @@ function populateSearchArtist(data, url) {
     }
 }
 
+function populateSearchTracks(data) {
+    for (let i = 0; i <= 3; i++) {
+        const rowSearch = document.getElementById('search-row');
 
+        const divCol = document.createElement('div');
+        divCol.classList.add('col-6', 'col-lg-3', 'mb-4');
+
+        const divItemSearch = document.createElement('div');
+        const trackId = data.tracks.items[i].id;
+        
+
+        divItemSearch.classList.add('items-search', 'rounded', 'pt-3', 'ps-1');
+        divItemSearch.style.backgroundImage = `url(${data.tracks.items[i].album.images[1].url})`
+        divItemSearch.style.backgroundSize = 'cover';
+        divItemSearch.style.backgroundPosition = 'center';
+
+        const h4 = document.createElement('h4');
+        h4.textContent = data.tracks.items[i].name;
+
+        divItemSearch.appendChild(h4);
+        divCol.appendChild(divItemSearch);
+        rowSearch.appendChild(divCol);
+    }
+}
 
 
 
