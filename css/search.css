@@ -11,25 +11,32 @@
   }
 }
 
+.input-group-text {
+  border: transparent;
+}
+
+.search-border {
+  border: 2px solid white;
+  border-radius: 50px;
+}
+
 @media screen and (min-width: 767px) {
   .search-input-pg #search-inp {
     border-radius: 0 50px 50px 0;
     background-color: #242424;
-    border: none;
     height: 65px;
+    border: none;
   }
   .search-input-pg #search-inp::placeholder {
     color: grey;
   }
   .search-input-pg #search-inp:focus {
-    border: 2px solid white;
     color: white;
   }
   .search-input-pg span {
     background-color: #242424;
     color: gray;
     border-radius: 50px;
-    border: none;
   }
 }
 
