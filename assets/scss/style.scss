@@ -251,7 +251,7 @@
                 color: #1db954;
             }
 
-            i {
+            .play{
                 margin-left: 2px;
             }
         }
@@ -280,11 +280,26 @@
             display: flex;
         }
 
-        #volume {
+        #volume-outer {
             width: 100px;
             height: 5px;
             border-radius: 50px;
-            background-color: white;
+            background-color: rgb(118, 118, 118);
+            cursor: pointer;
+            #volume{
+                height: 5px;
+                border-radius: 50px;
+                background-color: white;
+                >div{
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 100%;
+                    background-color: white;
+                    top: 50%;
+                    right: 0;
+                    transform: translate(50%, -50%);
+                }
+            }
         }
     }
 }

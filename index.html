@@ -256,7 +256,7 @@
                     </div>
                     <i class="fa-solid fa-backward-step"></i>
                     <div id="play" class="d-flex justify-content-center align-items-center">
-                        <i class="fa-solid fa-play"></i>
+                        <i class="fa-solid fa-play play" id="play-btn"></i>
                     </div>
                     <i class="fa-solid fa-forward-step"></i>
                     <div class="position-relative circles">
@@ -264,14 +264,14 @@
                         <i class="fa-solid fa-circle position-absolute circle"></i>
                     </div>
                 </div>
-                <div id="song" class="d-flex align-items-center column-gap-3 mt-2">
-                    <p class="mb-0">1:00</p>
+                <div id="song" song-id="#" song-duration="200" class="d-flex align-items-center column-gap-3 mt-2">
+                    <p class="mb-0" id="song-status">0:00</p>
                     <div id="song-time" tabindex="0">
-                        <div class="position-relative" id="song-time-line" style="width: 150px;">
+                        <div class="position-relative" id="song-time-line" style="width: 0px;">
                             <div id="song-time-toggler" class="position-absolute d-none"></div>
                         </div>
                     </div>
-                    <p class="mb-0">3:20</p>
+                    <p class="mb-0" id="song-duration"></p>
                 </div>
             </div>
 
@@ -279,8 +279,8 @@
                 <i class="fa-solid fa-microphone"></i>
                 <i class="fa-solid fa-microphone"></i>
                 <i class="fa-solid fa-computer computer"></i>
-                <i class="fa-solid fa-volume-low"></i>
-                <div id="volume"></div>
+                <i class="fa-solid fa-volume-high"></i>
+                <div id="volume-outer"><div id="volume" class="position-relative" style="width: 100px;"><div class="position-absolute d-none" id="volume-toggler"></div></div></div>
                 <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
             </div>
         </div>
