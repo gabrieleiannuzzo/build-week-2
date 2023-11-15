@@ -80,7 +80,14 @@
   }
 }
 
-
 .track-row:hover .hide-icon{
  display: block !important;
+}
+
+.track-row:hover .play-hover{
+  display: block !important;
+}
+
+.track-row:hover .number-hover{
+  display: none;
 }
