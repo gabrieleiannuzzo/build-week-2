@@ -8,6 +8,7 @@
 }
 #row aside .playlist-side .playlist-element {
   color: rgb(214, 214, 214);
+  cursor: pointer;
 }
 #row aside .playlist-side::-webkit-scrollbar {
   width: 10px;
@@ -54,12 +55,75 @@
   height: 1px;
   background-color: rgb(140, 140, 140);
 }
+#row #aside-1 .playlist-element {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
 #row #target {
-  flex: 0 0 65%;
+  flex: 0 0 100%;
   background-color: #1db954;
+}
+@media screen and (min-width: 768px) {
+  #row #target {
+    flex: 0 0 65%;
+  }
 }
 #row #aside-2 {
   flex: 0 0 14%;
+}
+#row #aside-2 .attivita-amici {
+  display: none;
+}
+@media screen and (min-width: 1128px) {
+  #row #aside-2 .attivita-amici {
+    display: block;
+  }
+}
+#row #aside-2 i:hover {
+  color: #1db954;
+}
+#row #aside-2 #add-friends {
+  font-size: 0.8rem;
+  top: -2px;
+}
+#row #aside-2 .friends-div {
+  font-size: 0.7rem;
+  display: none;
+}
+@media screen and (min-width: 1405px) {
+  #row #aside-2 .friends-div {
+    display: flex;
+  }
+}
+#row #aside-2 .friends-div img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+}
+#row #aside-2 .friends-div .bold {
+  font-weight: 700;
+}
+#row #aside-2 .friends-div .first-span,
+#row #aside-2 .friends-div .second-span {
+  font-size: 0.6rem;
+}
+#row #aside-2 .friends-div .circle {
+  font-size: 0.2rem;
+  vertical-align: middle;
+}
+#row #aside-2 .friends-div .outer-circle-div {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  border: 1px solid rgb(214, 214, 214);
+}
+#row #aside-2 .friends-div .outer-circle-div > div {
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  border: 1px solid rgb(214, 214, 214);
 }
 
 #footer {
@@ -110,6 +174,18 @@
     position: static;
   }
 }
+#footer #album-info #player #song-time {
+  cursor: pointer;
+}
+#footer #album-info #player #song-time #song-time-toggler {
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  width: 15px;
+  height: 15px;
+  background-color: #1db954;
+  border-radius: 100%;
+}
 @media screen and (min-width: 1500px) {
   #footer #album-info > div {
     flex: 0 0 33.33%;
@@ -149,8 +225,7 @@
   width: 400px;
   background-color: rgb(214, 214, 214);
 }
-#footer #player #song > div > div {
-  width: 150px;
+#footer #player #song > div #song-time-line {
   background-color: #1db954;
 }
 #footer #settings-div {
