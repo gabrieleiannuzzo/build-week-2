@@ -13,8 +13,8 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/albums.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/albums.css">
 </head>
 
 <body class="text-white overflow-hidden">
@@ -40,7 +40,7 @@
                             <a href="#" class="link-underline link-underline-opacity-0 current-page">Home</a>
                         </li>
                         <li class="mb-2">
-                            <a href="#" class="link-underline link-underline-opacity-0">Cerca</a>
+                            <a href="search.html" class="link-underline link-underline-opacity-0">Cerca</a>
                         </li>
                         <li class="mb-4">
                             <a href="#" class="link-underline link-underline-opacity-0">La tua
@@ -178,20 +178,20 @@
                             <div id="main-div-1-1"
                                 class="d-flex justify-content-center justify-content-md-start position-relative pt-4 pt-md-0">
                                 <i class="fa-solid fa-arrow-left position-absolute d-md-none"></i>
-                                <img src="assets/imgs/search/image-10.jpg" alt="album-img" id="album-img" class="mb-4 mb-md-0">
+                                <img src="" alt="album-img" id="album-img" class="mb-4 mb-md-0">
                             </div>
                             <div id="main-div-1-2" class="d-flex flex-column justify-content-end">
                                 <p class="d-none d-md-inline mb-0 position-relative" id="album">ALBUM</p>
-                                <h1 id="album-name" class="mb-4">Gioventù brucata</h1>
+                                <h1 id="album-name" class="mb-4"></h1>
                                 <div class="d-flex align-items-center column-gap-2 mb-2 mb-md-0">
-                                    <img src="assets/imgs/search/image-10.jpg" alt="artist-img" id="artist-img">
+                                    <img src="" alt="artist-img" id="artist-img">
                                     <h2 id="album-artist" class="mb-0">
-                                        Pinguini Tattici Nucleari
+                                        
                                         <span class="d-none d-md-inline"><i class="fa-solid fa-circle"></i></span>
-                                        <span class="d-none d-md-inline">2017</span>
+                                        <span id="albumYear" class="d-none d-md-inline">2017</span>
                                         <span class="d-none d-md-inline"><i class="fa-solid fa-circle"></i></span>
-                                        <span class="d-none d-md-inline">12 brani,</span>
-                                        <span class="d-none d-md-inline" s>53 min 20 sec.</span>
+                                        <span id="albumNumTracks" class="d-none d-md-inline">12 brani,</span>
+                                        <span id="albumLenght" class="d-none d-md-inline" s>53 min 20 sec.</span>
                                     </h2>
                                 </div>
                                 <p class="grey d-md-none">
@@ -228,10 +228,10 @@
             </div>
             <div id="second-main-div" class="pb-4">
                 <div class="container-fluid d-none d-md-flex pt-3" id="legend">
-                    <p class="mb-0 ps-3 pb-2 text-start div-2-1">#</p>
-                    <p class="mb-0 pb-2 text-start div-2-2">TITOLO</p>
+                    <p class="idTrack mb-0 ps-3 pb-2 text-start div-2-1">#</p>
+                    <p class="titleTrack mb-0 pb-2 text-start div-2-2">TITOLO</p>
                     <p class="d-none d-lg-inline mb-0 pb-2 text-end div-2-3">RIPRODUZIONI</p>
-                    <p class="mb-0 pe-2 pb-2 text-end div-2-4"><i class="fa-regular fa-clock"></i></p>
+                    <p class="durationTrack mb-0 pe-2 pb-2 text-end div-2-4"><i class="fa-regular fa-clock"></i></p>
                 </div>
             </div>
         </main>
@@ -420,8 +420,9 @@
     </template>
 
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/funzioni.js"></script>
-    <script src="assets/js/footer.js"></script>
+    <script src="js/funzioni.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/albums.js"></script>
 </body>
 
 </html>
