@@ -113,7 +113,7 @@ function populateTracks(data) {
                 console.log(previewUrl);
                 playCurrentTrack(previewUrl); // Call playCurrentTrack when a track is clicked
             }
-        });
+        })
     }
     
     function playCurrentTrack(previewUrl) {
