@@ -76,3 +76,8 @@
       font-size: 2rem;
     }
   }/*# sourceMappingURL=search.css.map */
+
+  #search-row a{
+    text-decoration: none;
+    color: white;
+  }
