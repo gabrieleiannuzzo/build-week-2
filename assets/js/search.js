@@ -1,4 +1,4 @@
-const token = "BQBJa1LMjvp92CmJw4gS5216CgTgAQI7TNIDrVhypBA2mvJLydX07aaYMosSbbjVro_j-WZrTliKU9JMvXNrMj4gJ5sAcIb6ZrPL0GPpijVxhNzQqgc"
+const token = localStorage.getItem('token');
 const inputField = document.getElementById('search-inp');
 
 inputField.addEventListener('keydown', function (event) {

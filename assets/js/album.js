@@ -3,14 +3,13 @@ const artistId = urlParams.get('id');
 const token = localStorage.getItem('token');
 
 if (artistId) {
-    const urlArtist = `https://api.spotify.com/v1/artists/${artistId}`;
+    const urlAlbum = `https://api.spotify.com/v1/albums/${albumId}`;
     const urlTracks = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=IT`;
 
-    fetchArtists(urlArtist, token);
-    fetchTracks(urlTracks, token);
+    fetchAlbum(urlAlbum, token);
 }
 
-function fetchArtists(url, token) {
+function fetchAlbum(url, token) {
     fetch(url, {
         method: "GET",
         headers: {
@@ -19,7 +18,7 @@ function fetchArtists(url, token) {
         }
     })
         .then(response => response.json())
-        .then(data => { populateArtist(data) })
+        .then(data => { console.log(data);})
 }
 
 function fetchTracks(url, token) {
@@ -114,8 +113,7 @@ function populateTracks(data) {
             }
         })
     }
-}
-
+    
 function populateArtist(data) {
     const artistNameTitle = document.getElementById('artist-name');
     const artistFollowersTitle = document.getElementById('visulizzazioni-art');
