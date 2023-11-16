@@ -1,7 +1,7 @@
 const audioPlayer = document.getElementById('audioPlayer');
 const playButton = document.getElementById('play');
-const previousButton = document.querySelector('fa-backward-step');
-const nextButton = document.querySelector('fa-forward-step');
+const previousButton = document.querySelector('.fa-backward-step');
+const nextButton = document.querySelector('.fa-forward-step');
 const volumeSlider = document.getElementById('volume');
 
 playButton.addEventListener('click', () => {
