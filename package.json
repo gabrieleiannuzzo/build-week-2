@@ -4,6 +4,6 @@
   },
   "scripts": {
     "compile": "sass assets/scss/style.scss assets/css/style.css -w",
-    "compile-min": "sass assets/scss/style.scss assets/css/style.min.css -w --style compressed"
+    "compile-albums": "sass assets/scss/albums.scss assets/css/albums.css -w"
   }
 }

@@ -1,3 +1,9 @@
+.pointer{
+    cursor: pointer;
+}
+.underline{
+    color: #1db954;
+}
 #row {
     aside {
         background-color: black;
@@ -85,9 +91,11 @@
     #target {
         flex: 0 0 100%;
         background-color: #1db954;
-
+        height:100vh;
+        background-color: #121212;
         @media screen and (min-width: 768px) {
             flex: 0 0 65%;
+            height: calc(100vh - 100px);
         }
     }
 
@@ -95,7 +103,7 @@
         flex: 0 0 14%;
         .attivita-amici{
             display: none;
-            @media screen and (min-width: 1128px){
+            @media screen and (min-width: 1150px){
                 display: block;
             }
         }
@@ -308,7 +316,7 @@
     #div-mobile-1 {
         background-color: #282828;
         column-gap: 10px;
-        margin-bottom: 35px;
+        margin-bottom: 20px;
 
         #outer-div {
             background-color: white;
@@ -365,6 +373,9 @@
         i {
             color: rgb(214, 214, 214);
             font-size: 1.4rem;
+        }
+        p{
+            font-size: 0.8rem;
         }
 
         .current-page {

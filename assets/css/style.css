@@ -1,3 +1,11 @@
+.pointer {
+  cursor: pointer;
+}
+
+.underline {
+  color: #1db954;
+}
+
 #row aside {
   background-color: black;
   height: calc(100vh - 100px);
@@ -64,10 +72,13 @@
 #row #target {
   flex: 0 0 100%;
   background-color: #1db954;
+  height: 100vh;
+  background-color: #121212;
 }
 @media screen and (min-width: 768px) {
   #row #target {
     flex: 0 0 65%;
+    height: calc(100vh - 100px);
   }
 }
 #row #aside-2 {
@@ -76,7 +87,7 @@
 #row #aside-2 .attivita-amici {
   display: none;
 }
-@media screen and (min-width: 1128px) {
+@media screen and (min-width: 1150px) {
   #row #aside-2 .attivita-amici {
     display: block;
   }
@@ -261,7 +272,7 @@
 #mobile-menu #div-mobile-1 {
   background-color: #282828;
   column-gap: 10px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
 }
 #mobile-menu #div-mobile-1 #outer-div {
   background-color: white;
@@ -310,6 +321,9 @@
 #mobile-menu #div-mobile-2 i {
   color: rgb(214, 214, 214);
   font-size: 1.4rem;
+}
+#mobile-menu #div-mobile-2 p {
+  font-size: 0.8rem;
 }
 #mobile-menu #div-mobile-2 .current-page {
   color: white;

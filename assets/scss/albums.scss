@@ -1,0 +1,190 @@
+#first-main-div{
+    background-image: linear-gradient(to bottom, rgb(136, 136, 0) 0%, #121212 95%, #121212 100%);
+    @media screen and (min-width: 768px){
+        background-image: linear-gradient(to bottom, rgb(136, 136, 0) 0%, rgb(136, 136, 0) 100%);
+    }
+    #main-div-1{
+        #header{
+            #arrows{
+                button{
+                    width: 25px;
+                    height: 25px;
+                    border: none;
+                    border-radius: 100%;
+                    background-color: rgba(60, 60, 60, 0.5);
+                    color: white;
+                    cursor: default;
+                }
+                .existing{
+                    cursor: pointer;
+                    background-color: rgba(black, 0.6);
+                    &:hover{
+                        background-color: rgba(black, 0.8);
+                    }
+                }
+            }
+            #user-info{
+                background-color: rgba(40, 40, 40, 0.5);
+                cursor: pointer;
+                border-radius: 50px;
+                max-width: 140px;
+                &:hover{
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+                img{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 100%;
+                }
+                p{
+                    font-weight: 700;
+                    font-size: 0.8rem;
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    -webkit-line-clamp: 1;
+                }
+                i{
+                    right: 5px;
+                }
+            }
+        }
+        #main-div-1-1{
+            i{
+                top: 24px;
+                left: 0;
+                font-size: 1.5rem;
+            }
+            img{
+                width: 200px;
+                box-shadow: 0 0 50px rgba(black, 0.5);
+            }
+        }
+        #main-div-1-2{
+            h1{
+                font-size: 1.4rem;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 2;
+                @media screen and (min-width: 768px) {
+                    font-size: 3rem;
+                    font-weight: 700;
+                }
+                @media screen and (min-width: 1200px){
+                    font-size: 4rem;
+                }
+            }
+            &>div{
+                img{
+                    border-radius: 100%;
+                    width: 25px;
+                }
+                h2{
+                    font-size: 0.8rem;
+                }
+            }
+            .grey{
+                color: rgb(214, 214, 214);
+                font-size: 0.8rem;
+                i{
+                    font-size: 0.2rem;
+                    vertical-align: middle;
+                }
+            }
+            #album{
+                font-size: 0.6rem;
+                font-weight: 700;
+                bottom: -5px;
+            }
+            #album-artist{
+                color: white;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                -webkit-line-clamp: 1;
+                span{
+                    color: rgb(214, 214, 214);
+                    i{
+                        font-size: 0.2rem;
+                        vertical-align: middle;
+                    }
+                }
+                span:last-child{
+                    color: rgb(178, 178, 178);
+                }
+            }
+        }
+    }
+    #main-div-2{
+        @media screen and (min-width: 768px){
+            margin-top: 25px;
+            padding-top: 25px;
+            background-color: rgba(black, 0.1);
+        }
+        i{
+            font-size: 1.2rem;
+        }
+        .play-div{
+            width: 40px;
+            height: 40px;
+            background-color: #1db954;
+            border-radius: 100%;
+            i{
+                margin-left: 2px;
+            }
+        }
+        .menu{
+            i{
+                font-size: 0.2rem;
+            }
+        }
+    }
+}
+#second-main-div{
+    background-color: #121212;
+    @media screen and (min-width: 768px){
+        background-image: linear-gradient(to bottom, rgb(136, 136, 0) 0%, #121212 20%);
+    }
+    #legend{
+        background-color: rgba(black, 0.1);
+        .div-2-1, .div-2-2, .div-2-3, .div-2-4{
+            border-bottom: 1px solid rgba(white, 0.5);
+        }
+    }
+    .div-2-1{
+        flex: 0 0 10%;
+        @media screen and (min-width: 992px){
+            flex: 0 0 8%;
+        }
+    }
+    .div-2-2{
+        flex: 0 0 70%;
+        @media screen and (min-width: 992px){
+            flex: 0 0 52%;
+        }
+    }
+    .div-2-3{
+        flex: 0 0 20%;
+    }
+    .div-2-4{
+        flex: 0 0 20%;
+    }
+    .song{
+        @media screen and (min-width: 768px){
+            background-color: rgba(black, 0.1);
+        }
+        h3{
+            font-size: 0.9rem;
+        }
+        h4{
+            font-size: 0.8rem;
+            color: rgb(178, 178, 178);
+        }
+        .menu{
+            i{
+                font-size: 0.2rem;
+            }
+        }
+    }
+}
