@@ -34,7 +34,7 @@ function populateSearchAlbums(data) {
         divCol.classList.add('col-6', 'col-lg-3', 'mb-4');
 
         const anchorAlbum = document.createElement('a');
-        anchorAlbum.href = "album.html?id=" + data.tracks.items[i].album.id;
+        anchorAlbum.href = "albums.html?id=" + data.tracks.items[i].album.id;
 
         const divItemSearch = document.createElement('div');
         divItemSearch.classList.add('items-search', 'rounded', 'pt-3', 'ps-1');

@@ -1,10 +1,11 @@
 const urlParams = new URLSearchParams(window.location.search);
-const artistId = urlParams.get('id');
+const albumId = urlParams.get('id');
 const token = localStorage.getItem('token');
 
-if (artistId) {
+
+if (albumId) {
     const urlAlbum = `https://api.spotify.com/v1/albums/${albumId}`;
-    const urlTracks = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=IT`;
+    //const urlTracks = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=IT`;
 
     fetchAlbum(urlAlbum, token);
 }
@@ -21,20 +22,6 @@ function fetchAlbum(url, token) {
         .then(data => { console.log(data);})
 }
 
-function fetchTracks(url, token) {
-    fetch(url, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-            "Authorization": "Bearer " + token
-        }
-    })
-        .then(response => response.json())
-        .then(data => {
-            console.log(data)
-            populateTracks(data)
-        })
-}
 
 function populateTracks(data) {
     const tracksWrapper = document.querySelector('#tracksWrapper');
@@ -100,6 +87,7 @@ function populateTracks(data) {
         tracksWrapper.appendChild(divRow);
         i++;
     }
+}
 
     const trackPlayBtns = document.getElementsByClassName('track-row');
     for (let i = 0; i < trackPlayBtns.length; i++) {
@@ -109,7 +97,7 @@ function populateTracks(data) {
             if (data.tracks[clickedTrackIndex].previewUrl) {
                 const previewUrl = data.tracks[clickedTrackIndex].previewUrl;
                 console.log(previewUrl);
-                playCurrentTrack(previewUrl); // Call playCurrentTrack when a track is clicked
+                playCurrentTrack(previewUrl);
             }
         })
     }
@@ -127,4 +115,37 @@ function populateArtist(data) {
     artistBgImg.style.backgroundSize = 'cover';
     artistBgImg.style.backgroundPosition = 'center';
     artistBgImg.style.backgroundRepeat = 'no-repeat'
+}
+
+// TUTTE LE CANZONI DOVRANNO ANDARE SOTTO QUESTO DIV
+const target = document.getElementById("second-main-div");
+
+class Song {
+    constructor(number, title, artist, played, duration, target){
+        this.number = number;
+        this.title = title;
+        this.artist = artist;
+        this.played = played;
+        this.duration = duration;
+        this.target = target;
+        this.HTMLInit();
+    }
+
+    HTMLInit () {
+        const template = document.querySelector("template");
+        const clone = document.importNode(template.content, true).firstElementChild;
+        const songNumber = clone.querySelector(".song-number");
+        const songTitle = clone.querySelector(".song-title");
+        const songArtist = clone.querySelector(".song-artist");
+        const songPlayed = clone.querySelector(".song-played");
+        const songDuration = clone.querySelector(".song-duration");
+
+        songNumber.innerText = this.number;
+        songTitle.innerText = this.title;
+        songArtist.innerText = this.artist;
+        songPlayed.innerText = this.played;
+        songDuration.innerText = this.duration;
+
+        target.append(clone);
+    }
 }
