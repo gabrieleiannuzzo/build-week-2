@@ -1,6 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const artistId = urlParams.get('id');
-const token = localStorage.getItem('token');
+//const token = localStorage.getItem('token');
+const token = "BQCKYesvhv0UjqTUeZMgQVJwIS34TYgEb_GJ-PrwZ2Sx3ziE78iXfdTjxLvTDHPypW9vbU_uDZqPeNqLwen3PCmXkTxiqY6OJf1d50WT6TTEFp6AlYI"
 
 if (artistId) {
     const urlArtist = `https://api.spotify.com/v1/artists/${artistId}`;
@@ -34,6 +35,9 @@ function fetchTracks(url, token) {
         .then(data => {
             console.log(data)
             populateTracks(data)
+
+
+
         })
 }
 
@@ -74,16 +78,13 @@ function populateTracks(data) {
         const formattedTime = `${minutes}:${String(seconds).padStart(2, '0')}`;
         p.textContent = formattedTime
 
-        // Creazione dell'elemento div con le classi 'col text-end px-0 ms-lg-5 d-none d-md-block track-ratings'
         const divRatings = document.createElement('div');
         divRatings.classList.add('col', 'text-end', 'px-0', 'ms-lg-5', 'd-none', 'd-md-block', 'track-ratings');
-        divRatings.textContent = '1.740.786.593';
+        divRatings.textContent = formattedTime;
 
-        // Creazione dell'elemento div con le classi 'col-1 text-end px-0 d-none d-md-block track-like'
         const divLike = document.createElement('div');
         divLike.classList.add('col-1', 'text-end', 'px-0', 'd-none', 'd-md-block', 'track-like');
 
-        // Creazione dell'elemento i con le classi 'fa-regular fa-heart hide-icon d-md-none'
         const iHeart = document.createElement('i');
         iHeart.classList.add('fa-regular', 'fa-heart', 'hide-icon', 'd-md-none');
 
@@ -91,6 +92,11 @@ function populateTracks(data) {
         divCol1.appendChild(iPlay);
         divCol2.appendChild(img);
         divCol.appendChild(p);
+
+        divLike.appendChild(iHeart);
+        divRatings.appendChild(divLike);
+        divCol.appendChild(divRatings);
+
         divRow.appendChild(divCol1);
         divRow.appendChild(divCol2);
         divRow.appendChild(divCol);
@@ -100,20 +106,60 @@ function populateTracks(data) {
         i++;
     }
 
+    const trackPlayBtns = document.getElementsByClassName('track-row');
+    for (let i = 0; i < trackPlayBtns.length; i++) {
+        console.log(trackPlayBtns[i]);
+        trackPlayBtns[i].addEventListener('click', (event) => {
+            const clickedTrackIndex = Array.from(trackPlayBtns).indexOf(event.currentTarget);
+            if (data.tracks[clickedTrackIndex].previewUrl) {
+                const previewUrl = data.tracks[clickedTrackIndex].previewUrl;
+                console.log(previewUrl);
+                playCurrentTrack(previewUrl); // Call playCurrentTrack when a track is clicked
+            }
+        });
+    }
+    
+    function playCurrentTrack(previewUrl) {
+        const audioPlayer = document.getElementById('audioPlayer');
+        const playButton = document.getElementById('play');
+    
+        console.log('Attempting to play:', previewUrl); // Log the URL for debugging
+    
+        // Check if the audio player is already playing a different track
+        if (audioPlayer.src !== previewUrl) {
+            audioPlayer.src = previewUrl;
+        }
+    
+        // Play or pause the audio
+        if (audioPlayer.paused) {
+            audioPlayer.play()
+                .then(() => {
+                    playButton.classList.remove('fa-play');
+                    playButton.classList.add('fa-pause');
+                })
+                .catch((error) => {
+                    console.error('Error playing audio:', error);
+                });
+        } else {
+            audioPlayer.pause();
+            playButton.classList.remove('fa-pause');
+            playButton.classList.add('fa-play');
+        }
+    }
+    
 }
 
 function populateArtist(data) {
-    console.log(data);
     const artistNameTitle = document.getElementById('artist-name');
     const artistFollowersTitle = document.getElementById('visulizzazioni-art');
-    const artistBgImg = document.querySelector('.artist')
+    const artistBgImg = document.querySelector('.artist');
+    const artistFollowers2 = document.querySelector('.monthly-listners');
 
     artistNameTitle.textContent = data.name;
     artistFollowersTitle.textContent = data.followers.total;
+    artistFollowers2.textContent = data.followers.total;
     artistBgImg.style.backgroundImage = `url(${data.images[0].url})`;
     artistBgImg.style.backgroundSize = 'cover';
     artistBgImg.style.backgroundPosition = 'center';
-    artistBgImg.style.backgroundRepeat = 'no-repeat';
-
-
+    artistBgImg.style.backgroundRepeat = 'no-repeat'
 }
