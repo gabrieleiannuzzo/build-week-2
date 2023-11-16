@@ -35,9 +35,6 @@ function fetchTracks(url, token) {
         .then(data => {
             console.log(data)
             populateTracks(data)
-
-
-
         })
 }
 
