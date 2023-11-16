@@ -1,0 +1,26 @@
+CANZONI SINGOLE (DEEZER)
+
+tracks => data =>
+id
+title (title_short)
+duration
+preview
+info artisti / album
+
+
+
+
+
+
+https://api.spotify.com/v1/playlists
+tracks.items[i].track.artists[i].name
+tracks.items[i].track.artists[i].id
+
+https://api.spotify.com/v1/artists/id/albums
+items[i].id
+items[i].name
+items[i].images[i]
+
+https://api.spotify.com/v1/albums/id
+
+https://api.spotify.com/v1/tracks/id

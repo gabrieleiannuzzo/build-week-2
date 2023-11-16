@@ -1,0 +1,141 @@
+
+
+.main-img{
+   height: 25px;
+   width: 25px;
+   border-radius: 100%;
+}
+
+.btnLeftRight{
+    height: 25px;
+    width: 25px;
+}
+.ctrMain{
+    height: 5%;
+}
+.miniP{
+    font-size: 0.7rem;
+}
+
+
+#main-brano{
+    width: 100%;
+    height: 10rem;
+    background-color: rgba(0, 0, 0, 0.793);
+
+}
+.main-brano-h{
+    font-size: 2.4rem;
+}
+.main-brano-p{
+    font-size: 0.7rem;
+}
+.main-brano-cntImg{
+    width: 18%;
+
+}
+
+.main-card-consigliati{
+    width: 15rem;
+    height: 4rem;
+}
+
+.main-consigliati-ctr-card{
+    width: 5rem;
+    height: 5rem;
+}
+.font-card-consigliati{
+    font-size: 0.7rem;
+}
+
+
+
+.main-img{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+ }
+ 
+ .btnLeftRight{
+     height: 25px;
+     width: 25px;
+ }
+ .ctrMain{
+     height: 5%;
+ }
+ .miniP{
+     font-size: 0.7rem;
+ }
+ 
+ /*brano in ascolto*/
+ 
+ #branoInAscolto{
+     width: 100%;
+     height: 10rem;
+     background-color: rgba(0, 0, 0, 0.793);
+ 
+ }
+ .main-brano-h{
+     font-size: 2.4rem;
+ }
+ .main-brano-p{
+     font-size: 0.7rem;
+ }
+ .main-brano-cntImg{
+     width: 18%;
+ 
+ }
+ /* consigliati*/
+ .main-card-consigliati{
+     width: 15rem;
+     height: 4rem;
+ }
+ 
+ .main-consigliati-div-card{
+     width: 5rem;
+     height: 5rem;
+ }
+ .font-card-consigliati{
+     font-size: 0.7rem;
+ }
+
+
+
+
+
+/*altro di ciò che ti piace*/
+
+.cards-container {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 150px;
+    background-color: var(--light-grey);
+    height: fit-content;
+   
+}
+ 
+.card-img {
+    width: 100%;
+    border-radius: 0.35rem;
+
+}
+
+.card-name {
+    margin: 0.25rem;
+    color: white;
+
+}
+
+.card-description {
+    margin: 0;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.titolo{
+    padding-top: 2rem;
+}

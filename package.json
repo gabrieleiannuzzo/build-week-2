@@ -1,0 +1,10 @@
+{
+    "dependencies": {
+      "bootstrap": "^5.3.2"
+    },
+    "scripts": {
+      "compile": "sass assets/scss/style.scss assets/css/style.css -w",
+      "compile-min": "sass assets/scss/style.scss assets/css/style.min.css -w --style compressed"
+    }
+  }
+  
