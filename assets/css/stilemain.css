@@ -5,34 +5,16 @@
 /*div controlli sopra*/
 
 
-.main-img{
-   height: 25px;
-   width: 25px;
-   border-radius: 100%;
-}
-
-.btnLeftRight{
-    height: 25px;
-    width: 25px;
-}
-.ctrMain{
-    height: 5%;
-}
-.miniP{
-    font-size: 0.7rem;
-}
 
 /*brano in ascolto*/
 
 #branoInAscolto{
     width: 98%;
-    height: 10rem;
+    height: 28vh;
     background-color: rgba(0, 0, 0, 0.793);
     
 }
-.main-brano-h{
-    font-size: 2.4rem;
-}
+
 .main-brano-p{
     font-size: 0.7rem;
 }
@@ -52,26 +34,16 @@
 
     height: 4rem;
     background-color: rgb(50, 50, 50);
-    
-}
-
-.main-consigliati-div-card {
-
-    height: 4rem;
-    width: 10rem;
-}
-.main-consigliati-ctr-card{
-    width: 5rem;
-    height: 5rem;
-}
-.main-card-consigliati{
     flex: 0 0 calc(50% - 4px);
 }
+
 
 .main-card-consigliati img {
     
     max-height: 100%;
+    box-shadow: 10px 0 10px -5px rgba(0, 0, 0, 0.5);
 }
+
 
 @media screen and (min-width: 768px){ 
     .main-card-consigliati {
