@@ -1,3 +1,22 @@
+class Footer {
+    constructor (title, artist, img, duration, next, previous) {
+        this.title = title;
+        this.artist = artist;
+        this.img = img;
+        this.duration = duration;
+        this.next = next;
+        this.previous = previous;
+        this.HTMLInit();
+    }
+
+    HTMLInit () {
+        const template = document.getElementById("footer-template");
+        const clone = document.importNode(template.content, true).firstElementChild;
+    }
+}
+
+const target = document.getElementById("footer");
+
 // FUNZIONE DI GESTIONE DELLA FUNZIONALITA DEI LIKE
 const footer = document.getElementById("footer");
 
@@ -172,8 +191,8 @@ volumeOuter.addEventListener("click", (e) => {
 });
 
 volumeOuter.addEventListener("mousedown", (e) => {
-    isMousePressedVolume = false;
-    volumeClicked = true
+    isMousePressedVolume = true;
+    volumeClicked = true;
     e.preventDefault();
     clickPositionVolume = e.clientX - volumeOuter.getBoundingClientRect().left;
     volume.style.width = clickPositionVolume + "px";
