@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 const artistId = urlParams.get('id');
 //const token = localStorage.getItem('token');
-const token = "BQCKYesvhv0UjqTUeZMgQVJwIS34TYgEb_GJ-PrwZ2Sx3ziE78iXfdTjxLvTDHPypW9vbU_uDZqPeNqLwen3PCmXkTxiqY6OJf1d50WT6TTEFp6AlYI"
+const token = "BQBJa1LMjvp92CmJw4gS5216CgTgAQI7TNIDrVhypBA2mvJLydX07aaYMosSbbjVro_j-WZrTliKU9JMvXNrMj4gJ5sAcIb6ZrPL0GPpijVxhNzQqgc"
 
 if (artistId) {
     const urlArtist = `https://api.spotify.com/v1/artists/${artistId}`;
