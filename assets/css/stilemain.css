@@ -1,18 +1,13 @@
-.colore{
+.coloreMain{
     background-color: rgb(40, 40, 40);
 }
-
-/*div controlli sopra*/
-
-
 
 /*brano in ascolto*/
 
 #branoInAscolto{
     width: 98%;
     height: 28vh;
-    background-color: rgba(0, 0, 0, 0.793);
-    
+    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 54%);
 }
 
 .main-brano-p{
